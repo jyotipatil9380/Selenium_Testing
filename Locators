@@ -1,0 +1,49 @@
+package Selenium_PKG;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class Locators_Demo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.setProperty("webdriver.chrome.driver", 
+	            "C:\\Chrome\\chromedriver-win64 (1)\\chromedriver-win64\\chromedriver.exe");
+	       ChromeOptions op=new ChromeOptions();
+	        op.setBinary("C:\\Chrome\\chrome-win64\\chrome-win64\\chrome.exe");
+	        WebDriver driver = new ChromeDriver(op);
+	        driver.get("https://www.flipkart.com/");
+	        //maximize the window size...
+	        driver.manage().window().maximize();
+	        //find element by name
+	       // driver.findElement(By.name("q")).sendKeys("MAC");
+	        
+	        //by using ID
+	     //  boolean displayContainer= driver.findElement(By.id("portal--container")).isDisplayed();
+	      // System.out.println(displayContainer);
+	        
+	       //Linktext 
+	      // driver.findElement(By.linkText("Beauty & toys")).click();
+	        
+	        //partialLinktext==>it is not prefered because we are given the some part of text so that that name is also used by other on same page
+	       //driver.findElement(By.partialLinkText("Beauty ")).click();
+	        
+	        //to get the group of elements we can use findelements and get the exact numbers
+	      // List<WebElement>header=driver.findElements(By.className("_2-LWwB"));
+	     //  System.out.println(header.size());
+	        
+	        //Tagname to get total number of links
+	       // List<WebElement>links=driver.findElements(By.tagName("a"));
+	       //System.out.println("Total number of Links:"+links.size());
+	        
+	        
+	        
+	}
+
+}
